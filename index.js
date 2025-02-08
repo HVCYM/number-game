@@ -48,6 +48,6 @@ document.querySelector('.reset').addEventListener('click', () =>{
    secretNumber = Math.trunc(Math.random() * 20) + 1;
    document.querySelector('.info').textContent = 'Start Guessing ...';
    document.querySelector('.info').style.color = 'white';
-   document.querySelector('.input_box').textContent = '';
+   document.querySelector('.input_box').textContent = 'Enter';
    win = false;
 })
