@@ -11,6 +11,7 @@ document.querySelector('.check').addEventListener('click', () => {
    if(win) return;
    if(!score)  return;
    if(guess < 1 || guess > 20)   message = 'Out of range !';
+   else if(guess.isNan) message = 'Not a number';
    else if(guess === secretNumber) message = 'Correct Guess !';
    else if(guess > secretNumber) message = 'Too high !';
    else message = 'Too low !';
@@ -47,5 +48,6 @@ document.querySelector('.reset').addEventListener('click', () =>{
    secretNumber = Math.trunc(Math.random() * 20) + 1;
    document.querySelector('.info').textContent = 'Start Guessing ...';
    document.querySelector('.info').style.color = 'white';
+   document.querySelector('.input_box').textContent = '';
    win = false;
 })
